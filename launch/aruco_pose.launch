@@ -1,0 +1,20 @@
+<launch>
+    <!-- Camera topic configuration -->
+    <arg name="image_topic" default="/camera/image_raw" />
+    <arg name="camera_info_topic" default="/camera/camera_info" />
+    
+    <!-- Marker configuration -->
+    <arg name="marker_dictionary" default="DICT_5X5_100" />
+    <arg name="marker_size" default="0.14" />  <!-- meters -->
+
+    <!-- ArUco Pose Estimator Node -->
+    <node name="aruco_pose_estimator" pkg="aruco_pose_estimator" type="aruco_pose_node" output="screen">
+        <!-- Topic configuration -->
+        <param name="image_topic" value="$(arg image_topic)" />
+        <param name="camera_info_topic" value="$(arg camera_info_topic)" />
+        
+        <!-- Marker parameters -->
+        <param name="marker_dictionary" value="$(arg marker_dictionary)" />
+        <param name="marker_size" value="$(arg marker_size)" />
+    </node>
+</launch>

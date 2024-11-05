@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>aruco_pose_estimator</name>
+  <version>0.1.0</version>
+  <description>ArUco Marker Pose Estimation ROS Node</description>
+  
+  <maintainer email="aminfadel2004@gmail.com">Amin Fadel</maintainer>
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>visualization_msgs</depend>
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>camera_info_manager</build_depend>
+  
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>camera_info_manager</exec_depend>
+  
+  <depend>opencv</depend>
+  <depend>yaml-cpp</depend>
+</package>
